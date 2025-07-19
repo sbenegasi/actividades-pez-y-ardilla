@@ -1,20 +1,14 @@
 package com.pezardilla.actividades;
 
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.View;
-import android.widget.FrameLayout;
-
-import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-
+import com.google.android.material.navigation.NavigationView;
 import com.pezardilla.actividades.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,17 +22,15 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // Configuración normal de toolbar / drawer / navView…
         setSupportActionBar(binding.appBarMain.toolbar);
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
-        )
-                .setOpenableLayout(drawer)
-                .build();
 
-        // **Usa el id real NAV_HOST = R.id.nav_host**
+        // Apunta al nuevo fragmento raíz
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.menuPrincipalFragment
+        ).setOpenableLayout(drawer).build();
+
         NavHostFragment navHostFragment =
                 (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host);
 
@@ -46,17 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-        // Ahora sí coge los FrameLayout directamente via findViewById
-        FrameLayout btnAct = findViewById(R.id.btnActividades);
-        FrameLayout btnCli = findViewById(R.id.btnClientes);
-
-        btnAct.setOnClickListener(v ->
-                navController.navigate(R.id.actividadesFragment)
-        );
-        btnCli.setOnClickListener(v ->
-                navController.navigate(R.id.clientesFragment)
-        );
     }
 
     @Override

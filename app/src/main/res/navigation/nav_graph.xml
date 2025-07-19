@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/menuPrincipalFragment">
+
+    <fragment
+        android:id="@+id/menuPrincipalFragment"
+        android:name="com.pezardilla.actividades.ui.menu.MenuPrincipalFragment"
+        android:label="Menú Principal"
+        tools:layout="@layout/fragment_menu_principal" />
+
+    <fragment
+        android:id="@+id/clientesFragment"
+        android:name="com.pezardilla.actividades.ui.clientes.ClientesFragment"
+        android:label="Clientes"
+        tools:layout="@layout/fragment_clientes" />
+
+    <fragment
+        android:id="@+id/actividadesFragment"
+        android:name="com.pezardilla.actividades.ui.actividades.ActividadesFragment"
+        android:label="Actividades"
+        tools:layout="@layout/fragment_actividades" />
+</navigation>
