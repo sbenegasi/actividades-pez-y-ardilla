@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "500314199242",
+    "firebase_url": "https://pezyardilla-9a6ed-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pezyardilla-9a6ed",
+    "storage_bucket": "pezyardilla-9a6ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500314199242:android:b9cdb99dcd5aa372659033",
+        "android_client_info": {
+          "package_name": "com.pezardilla.actividades"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTmYCc0vx6zGMX8doWqGzcKe5WqSfTtw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

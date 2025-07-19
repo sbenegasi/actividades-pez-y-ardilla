@@ -1,0 +1,19 @@
+// Este es el buildscript del proyecto raíz: sólo necesitamos el AGP aquí
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        // Plugin de Android Gradle
+        classpath("com.android.tools.build:gradle:8.10.1")
+        // NOTA: Ya NO ponemos aquí com.google.gms:google-services
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
