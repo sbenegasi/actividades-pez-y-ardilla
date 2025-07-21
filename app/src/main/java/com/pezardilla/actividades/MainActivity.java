@@ -28,7 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Apunta al nuevo fragmento raíz
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.menuPrincipalFragment
+                R.id.menuPrincipalFragment,
+                R.id.actividadesFragment,
+                R.id.clientesFragment
         ).setOpenableLayout(drawer).build();
 
         NavHostFragment navHostFragment =
@@ -38,6 +40,24 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+// 🔧 Manejo manual del clic en “Inicio”
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+
+            if (id == R.id.menuPrincipalFragment) {
+                // Forzar recarga del fragmento raíz
+                navController.popBackStack(R.id.menuPrincipalFragment, false);
+                navController.navigate(R.id.menuPrincipalFragment);
+            } else {
+                NavigationUI.onNavDestinationSelected(item, navController);
+            }
+
+            drawer.closeDrawers();
+            return true;
+        });
+
+
     }
 
     @Override
