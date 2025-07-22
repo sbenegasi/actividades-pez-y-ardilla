@@ -1,0 +1,12 @@
+<resources>
+    <string-array name="week_day_labels_es">
+        <!-- Empieza por Lunes -->
+        <item>Lun</item>
+        <item>Mar</item>
+        <item>Mié</item>
+        <item>Jue</item>
+        <item>Vie</item>
+        <item>Sáb</item>
+        <item>Dom</item>
+    </string-array>
+</resources>

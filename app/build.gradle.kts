@@ -49,14 +49,9 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx:20.3.0")
     implementation("com.google.firebase:firebase-analytics-ktx:21.3.0")
 
-    implementation("com.prolificinteractive:material-calendarview:1.4.3") {
-        // excluimos solo el módulo que arrastra com.android.support
-        exclude(group = "com.android.support", module = "support-compat")
-        // si aun hay clases duplicadas, también:
-        exclude(group = "com.android.support", module = "support-annotations")
-    }
+    implementation ("com.github.prolificinteractive:material-calendarview:2.0.1")
 
-
+    implementation("com.jakewharton.threetenabp:threetenabp:1.4.4")
 
 
     testImplementation(libs.junit)
