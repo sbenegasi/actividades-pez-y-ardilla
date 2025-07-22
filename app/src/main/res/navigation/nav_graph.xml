@@ -22,4 +22,14 @@
         android:name="com.pezardilla.actividades.ui.actividades.ActividadesFragment"
         android:label="Actividades"
         tools:layout="@layout/fragment_actividades" />
+
+
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.pezardilla.actividades.ui.calendario.CalendarioFragment"
+        android:label="Calendario"
+        tools:layout="@layout/fragment_calendario" />
+
+
+
 </navigation>

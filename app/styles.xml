@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CalendarTodayText">
+        <item name="android:textColor">@color/teal_200</item>
+        <!-- puedes añadir tamaño, fuente, etc. -->
+    </style>
+</resources>

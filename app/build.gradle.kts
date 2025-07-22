@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.pezardilla.actividades"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -48,6 +48,16 @@ dependencies {
     // Firebase
     implementation("com.google.firebase:firebase-database-ktx:20.3.0")
     implementation("com.google.firebase:firebase-analytics-ktx:21.3.0")
+
+    implementation("com.prolificinteractive:material-calendarview:1.4.3") {
+        // excluimos solo el módulo que arrastra com.android.support
+        exclude(group = "com.android.support", module = "support-compat")
+        // si aun hay clases duplicadas, también:
+        exclude(group = "com.android.support", module = "support-annotations")
+    }
+
+
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

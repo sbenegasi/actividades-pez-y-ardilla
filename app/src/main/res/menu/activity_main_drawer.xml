@@ -15,6 +15,10 @@
         android:icon="@android:drawable/ic_menu_myplaces"
         android:title="Actividades" />
 
+    <item
+        android:id="@+id/calendarioFragment"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="Calendario" />
 
 
 </menu>
